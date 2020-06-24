@@ -45,10 +45,7 @@ public class AcademicPlanBuilder {
 
     // Методя для добавления дисциплины
     public AcademicPlanBuilder subject(String subjectName) {
-        AcademicPlanBuilder ++;
-       // ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("ApplicationContext.xml");
         _currentSubject = ctx.getBean("Subject", Subject.class);
-        //_currentSubject = new Subject();
         _subjects.put(subjectName, _currentSubject);
         return this;
     }

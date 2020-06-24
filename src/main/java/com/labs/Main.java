@@ -4,13 +4,14 @@ import java.util.List;
 
 public class Main {
 
+
     private static void printQuery(AcademicPlan plan, String subjectName) {
         SubjectQuery q = plan.query(subjectName);
         System.out.println(String.format("%s {", subjectName));
 
         // Печатаем входные ЗУНы
         System.out.println("  INPUTS");
-        for (SkillQuery sq: q.requiredSkills()) {
+        for (SkillQuery sq : q.requiredSkills()) {
             System.out.print("    ");
             System.out.print(sq.skill().toString());
 
@@ -19,7 +20,7 @@ public class Main {
                 // Печатаем дисциплины, для которых
                 // текущий ЗУН явялется выходным
                 System.out.print(" produced by {");
-                for (Subject s: subjects) {
+                for (Subject s : subjects) {
                     System.out.print(" ");
                     System.out.print(s.name());
                 }
@@ -30,7 +31,7 @@ public class Main {
 
         // Печатаем выходные ЗУНы
         System.out.println("  OUTPUTS");
-        for (SkillQuery sq: q.producedSkills()) {
+        for (SkillQuery sq : q.producedSkills()) {
             System.out.print("    ");
             System.out.print(sq.skill().toString());
 
@@ -39,7 +40,7 @@ public class Main {
                 // Печатаем дисциплины, для которых
                 // текущий ЗУН явялется входным
                 System.out.print(" required by {");
-                for (Subject s: subjects) {
+                for (Subject s : subjects) {
                     System.out.print(" ");
                     System.out.print(s.name());
                 }
@@ -70,26 +71,27 @@ public class Main {
                 .knowledge("i")
                 // Добавляем дисциплины
                 .subject("Subject_1")
-                    .requires("a")
-                    .requires("b")
-                    .produces("d")
+                .requires("a")
+                .requires("b")
+                .produces("d")
                 .subject("Subject_2")
-                    .requires("c")
-                    .requires("g")
-                    .produces("i")
-                    .produces("f")
+                .requires("c")
+                .requires("g")
+                .produces("i")
+                .produces("f")
                 .subject("Subject_3")
-                    .requires("c")
-                    .requires("d")
-                    .requires("i")
-                    .produces("h")
+                .requires("c")
+                .requires("d")
+                .requires("i")
+                .produces("h")
                 .subject("Subject_4")
-                    .requires("c")
-                    .requires("d")
-                    .requires("i")
-                    .requires("h")
-                    .produces("e")
+                .requires("c")
+                .requires("d")
+                .requires("i")
+                .requires("h")
+                .produces("e")
                 .build();
+
 
         // Печетаем дисциплины
         printQuery(plan, "Subject_1");
@@ -97,4 +99,7 @@ public class Main {
         printQuery(plan, "Subject_3");
         printQuery(plan, "Subject_4");
     }
+
+
 }
+

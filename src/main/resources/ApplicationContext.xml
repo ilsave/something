@@ -6,20 +6,6 @@
 
     <context:component-scan base-package="com.labs"/>
 
-<!--    <bean id="Subject_1"-->
-<!--          class="com.labs.Subject">-->
-<!--    </bean>-->
 
-<!--    <bean id="Subject_2"-->
-<!--          class="com.labs.Subject">-->
-<!--    </bean>-->
-
-<!--    <bean id="Subject_3"-->
-<!--          class="com.labs.Subject">-->
-<!--    </bean>-->
-
-<!--    <bean id="Subject_4"-->
-<!--&lt;!&ndash;          class="com.labs.Subject">-->
-<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
 
 </beans>
